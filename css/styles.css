@@ -1,0 +1,660 @@
+/*Keeps footer at bottom on window when content is too short*/
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #601A4A;
+}
+
+.container {
+  flex: 1 0 auto;
+  background-color: #F9F4EC;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+
+/* navbar styles */
+.navbar-expand-lg {
+  padding: 0;
+
+}
+
+.navbar-colours {
+  background-color: #F9F4EC;
+  border-bottom: 0.2rem solid #63ACBE;
+}
+
+.nav-link {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+.navbar-collapse a:hover {
+  color: #601A4A;
+}
+
+a.navbar-brand {
+  color: #ee5253;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nav-item {
+  padding-left: 0.3rem;
+}
+
+
+/* mobile 3-bar icon */
+.fas {
+  font-size: 2.1rem;
+  color: #ee5253;
+}
+
+/*  footer styles */
+
+.footer-scheme {
+  background-color: #F9F4EC;
+  border-top: 0.1rem solid #63ACBE;
+  padding: 1rem;
+}
+
+.footer-scheme > h1 {
+  color: #ee5253;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 0.1rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+/* general page styles */
+
+.page-title > h1 {
+  color: #ee5253;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.1rem;
+  margin-bottom: 0;
+}
+
+.page-alt-colour-title > h1 {
+  color: #63ACBE;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.sidebar-content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-subtitle > h3 {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.6rem;
+
+}
+
+.page-subtitle-left > h3 {
+  color: #ee5253;
+  font-family: 'Quicksand', sans-serif;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.page-alt-subtitle-left > h3 {
+  color: #F9F4EC;
+  font-family: 'Quicksand', sans-serif;
+  text-align: left;
+  font-size: 1.6rem;
+}
+
+.page-subtitle-left-padding > h3 {
+  color: #ee5253;
+  font-family: 'Quicksand', sans-serif;
+  text-align: left;
+  font-size: 1.6rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.body-text {
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.body-text-left {
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.body-text-left-blue-row {
+  color: #F9F4EC;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.col-md-9 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.blue-row {
+  background-color: #63ACBE;
+  color: #F9F4EC;
+  padding-bottom: 1rem;
+}
+
+.white-row {
+  background-color: #F9F4EC;
+}
+
+.required:after {
+  content: "*";
+  color: red;
+}
+
+/* Recipe & Collection Card stylings */
+
+.card {
+  border-radius: 0;
+}
+
+.hide-overflow {
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.card:hover {
+  border: none;
+}
+
+.card-img-holder {
+  overflow: hidden;
+}
+
+.card-deck-header {
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-deck-row {
+  margin-bottom: 2rem;
+}
+
+/* Collection Card Stylings */
+
+.card-img-overlay {
+  color: #ee5253;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  max-width:100%;
+  height:auto;
+}
+
+.collection-link {
+  transition: transform 0.5s ease;
+  max-width:100%;
+  height:auto;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.collection-link:hover {
+  transform: scale(1.1);
+}
+
+h5.collection-title {
+  margin: auto;
+  padding: 0.5rem;
+  background-color: #F9F4EC;
+  border-left: 0.2rem solid #ee5253;
+}
+
+.card-img-top {
+  filter: contrast(60%);
+  border-radius: 0;
+}
+
+
+/* Recipe Card Stylings */
+
+.recipe-row {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h5.recipe-title {
+  padding: 0.5rem;
+  background-color: #ee5253;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #F9F4EC;
+}
+
+.card-body{
+  padding: 0;
+}
+
+.card-img{
+  border-radius: 0;
+}
+
+/* PAGE SPECIFIC STYLES */
+
+/* index page specific styles */
+
+.ingredient-title {
+  padding: 1rem 0 0 0;
+}
+
+.ingredient-media {
+  padding: 1rem;
+}
+
+.ingredient-photo {
+	margin-left: auto;
+	margin-right: auto;
+	max-width:100%;
+	display:block;
+}
+
+.trending-recipe-list-item {
+	text-align: center;
+}
+
+.card-deck-header > h3 {
+  color: #F9F4EC;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.complete-collection {
+  color: #ee5253;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.complete-collection:hover{
+  color: #601A4A;
+}
+
+.complete-collection-alt {
+  color: #F9F4EC !important;
+}
+
+.monthly-ingredient {
+  padding: 0;
+}
+
+/* Recipes page specific styles */
+
+.select-menu {
+  background-color: #fff;
+  border-color: #63ACBE;
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.review-rating {
+  width: auto;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.select-menu:focus {
+  box-shadow: none;
+}
+/* end of search box*/
+
+.filter-options {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a.recipe-link {
+  padding: 0;
+  color: #ee5253;
+  background-color: #F9F4EC;
+}
+
+.card-hover:hover {
+  border: 0.2rem solid #63ACBE !important;
+}
+
+/* Individual Recipe page styles */
+.recipe-header {
+  padding-top: 2rem;
+}
+
+.recipe-photo {
+  padding: 0.25rem;
+  border: 1px solid #63ACBE;
+  max-width: 100%;
+  height: auto;
+}
+
+.fa-icons-recipe-specs {
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.star-ratings-sprite {
+  background: url("../images/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+}
+
+.star-ratings-sprite-rating {
+  background: url("../images/star-rating-sprite.png") repeat-x 0 100%;
+  float: left;
+  height: 21px;
+  display:block;
+}
+
+.ingredient-listing {
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  text-align: left;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+}
+
+.review-link {
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.link-right {
+  text-align: right;
+  vertical-align: bottom;
+}
+
+.review-card {
+  background-color: #F9F4EC;
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  border-left: 0.3rem solid #ee5253 !important;
+}
+
+h6.card-subtitle {
+  color: #63ACBE;
+  margin: 0;
+}
+
+h6.card-subtitle-alt {
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  color: #ee5253;
+}
+
+h5.card-subtitle {
+  font-size: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+h5.card-subtitle-alt {
+  font-size: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  color: #ee5253;
+}
+
+textarea.form-control {
+  background-color: #fff;
+  border-color: #63ACBE;
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+textarea.form-control::placeholder{
+  color: #63ACBE;
+}
+
+.text-link {
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.text-link:hover {
+  background-color: #63ACBE;
+  color: #F9F4EC;
+}
+
+/* Collections page styling */
+
+.collection-row {
+  margin-bottom: 1rem;
+}
+
+.collection-strip {
+  background-color: #c9f3d5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  border: none;
+}
+
+
+/* Log In & Join page stylings */
+
+#email {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border: 0.1rem solid #63ACBE;
+  box-shadow: none;
+}
+
+#email:focus {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border: none;
+  box-shadow: none;
+}
+
+#email::placeholder {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+#password {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border: 0.1rem solid #63ACBE;
+  box-shadow: none;
+}
+
+#password:focus {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border: none;
+  box-shadow: none;
+}
+
+#password::placeholder {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+#name {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border: 0.1rem solid #63ACBE;
+  box-shadow: none;
+}
+
+#name:focus {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border: none;
+  box-shadow: none;
+}
+
+#name::placeholder {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+#confirm-password {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border: 0.1rem solid #63ACBE;
+  box-shadow: none;
+}
+
+#confirm-password:focus {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  border: none;
+  box-shadow: none;
+}
+
+#confirm-password::placeholder {
+  color: #63ACBE;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+}
+
+label {
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.sign-up-link {
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.sign-up-link:hover {
+  background-color: #63ACBE;
+  padding: 0.5rem;
+  color: #F9F4EC;
+
+}
+
+.btn-primary {
+  background-color: white;
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+  border-color: #ee5253;
+}
+
+.btn-primary:hover {
+  background-color: #ee5253;
+  color: #F9F4EC;
+  font-family: 'Quicksand', sans-serif;
+  border-color: #ee5253;
+}
+
+.btn-primary:active {
+  background-color: #ee5253 !important;
+  color: #F9F4EC !important;
+  font-family: 'Quicksand', sans-serif;
+  border-color: #ee5253 !important;
+}
+
+.btn-primary:focus {
+  background-color: #ee5253;
+  color: #F9F4EC;
+  font-family: 'Quicksand', sans-serif;
+  border-color: #ee5253;
+  box-shadow: none;
+}
+
+.join-referral {
+  padding: 3rem;
+}
+
+/* join page styles */
+.alert-danger {
+  margin-top: 1rem;
+}
+
+/*Account page styles*/
+
+.card-text{
+  color: #601A4A;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.2rem;
+  display: inline;
+}
+
+.card-text-alt{
+  color: #F9F4EC;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.2rem;
+  display: inline;
+}
+
+.fa-star {
+  color: #e7711b !important;
+  font-size: 1rem !important;
+}
